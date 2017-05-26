@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="smh-0c-Feh"/>
+                        <viewControllerLayoutGuide type="bottom" id="V4a-xA-ejL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="temp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trV-ca-ebc">
+                                <rect key="frame" x="140" y="107" width="40" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="to3-SS-F2C">
+                                <rect key="frame" x="107" y="60" width="106" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Input city:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2On-P6-cDy">
+                                <rect key="frame" x="122" y="31" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l13-wi-YZ2">
+                                <rect key="frame" x="107" y="142" width="106" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Show Weather">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="refresh:" destination="2" eventType="touchUpInside" id="f3f-Bp-ifX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l13-wi-YZ2" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="2su-gc-HsB"/>
+                            <constraint firstItem="trV-ca-ebc" firstAttribute="top" secondItem="3" secondAttribute="top" constant="107" id="ZVL-Id-cQt"/>
+                            <constraint firstItem="to3-SS-F2C" firstAttribute="leading" secondItem="l13-wi-YZ2" secondAttribute="leading" id="dGX-sw-nXk"/>
+                            <constraint firstItem="l13-wi-YZ2" firstAttribute="trailing" secondItem="to3-SS-F2C" secondAttribute="trailing" id="hdq-v0-B0l"/>
+                            <constraint firstItem="2On-P6-cDy" firstAttribute="centerX" secondItem="to3-SS-F2C" secondAttribute="centerX" id="jvo-Zc-Uiw"/>
+                            <constraint firstItem="l13-wi-YZ2" firstAttribute="top" secondItem="3" secondAttribute="top" constant="142" id="kba-Qf-nNl"/>
+                            <constraint firstItem="trV-ca-ebc" firstAttribute="centerX" secondItem="to3-SS-F2C" secondAttribute="centerX" id="oX4-4B-P9r"/>
+                            <constraint firstItem="2On-P6-cDy" firstAttribute="top" secondItem="3" secondAttribute="top" constant="31" id="oYU-cf-oei"/>
+                            <constraint firstItem="to3-SS-F2C" firstAttribute="top" secondItem="2On-P6-cDy" secondAttribute="bottom" constant="8" symbolic="YES" id="ucm-9Y-XDC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityBox" destination="to3-SS-F2C" id="gbU-RS-G1C"/>
+                        <outlet property="indicator" destination="trV-ca-ebc" id="2s0-QW-dMu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58" y="-2"/>
+        </scene>
+    </scenes>
+</document>
